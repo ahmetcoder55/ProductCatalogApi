@@ -1,7 +1,7 @@
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccess.Concrete
+namespace DataAccess.Concrete.Context
 {
     public class ProductCatalogContext:DbContext
     {
@@ -13,6 +13,6 @@ namespace DataAccess.Concrete
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
 
-        
+
     }
 }
