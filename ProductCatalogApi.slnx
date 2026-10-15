@@ -2,5 +2,6 @@
   <Project Path="Business/Business.csproj" />
   <Project Path="DataAccess/DataAccess.csproj" />
   <Project Path="Entities/Entities.csproj" />
+  <Project Path="Presentation.Mvc/Presentation.Mvc.csproj" />
   <Project Path="UI/UI.csproj" />
 </Solution>
