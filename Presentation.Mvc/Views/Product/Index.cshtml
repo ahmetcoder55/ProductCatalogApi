@@ -1,0 +1,39 @@
+@model IEnumerable<Entities.Concrete.DTOs.ProductDto>
+
+@{
+    ViewData["Title"] = "Ürün Listesi";
+}
+
+<div class="container mt-4">
+    <h2>Ürün Listesi</h2>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Yeni Ürün Ekle</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ürün Adı</th>
+                <th>Kategori</th>
+                <th>Açıklama</th>
+                <th>Oluşturulma Tarihi</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.CategoryName</td>
+                    <td>@item.Description</td>
+                    <td>@item.CreatedAte.ToString("dd.MM.yyyy")</td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-danger btn-sm" onclick="return confirm('Bu ürünü silmek istediğinize emin misiniz?');">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,6 +1,7 @@
 namespace Entities.Concrete.DTOs
 {
     public record ProductDto(
+        
         int ProductId, 
         int CategoryId, 
         string CategoryName, 
@@ -8,5 +9,10 @@ namespace Entities.Concrete.DTOs
         string Description, 
         string Content, 
         DateTime CreatedAte
-    );
+    )
+    {
+        public ProductDto() : this(0, 0, string.Empty, string.Empty, string.Empty, string.Empty, DateTime.Now) 
+        { 
+        }
+    };
 }

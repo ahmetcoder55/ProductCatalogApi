@@ -1,0 +1,17 @@
+@model Entities.Concrete.DTOs.CategoryCreateDto
+
+@{
+    ViewData["Title"] = "Yeni Kategori Ekle";
+}
+
+<div class="container mt-4">
+    <h2>Yeni Kategori Ekle</h2>
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label class="form-label">Kategori Adı</label>
+            <input asp-for="CategoryName" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-success">Kaydet</button>
+        <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+    </form>
+</div>
